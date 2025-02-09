@@ -16,7 +16,5 @@ Este repositorio contiene una landing page realizada en HTML y CSS parte del cur
 ## Acerca del curso de Maquetación Web
 En este curso comenzarás desde cero en el mundo del código y adquirirás el conocimiento suficiente para tener tu propia web al finalizar el mismo
 
-# Acerca de SERGIE CODE:
-#### ¡Hola! ¡Yo soy Aldo Ares y soy Software Engineer! Soy tech lead de un team Frontend con el cual hacemos desarrollos especializados en empresas de Seguros. También me dedico a la divulgación de tecnología, programación e Inteligencia Artificial por redes sociales. Con mucho orgullo he podido dar clases en la Universidad y además en diversos cursos online acerca de desarrollo web
 
 

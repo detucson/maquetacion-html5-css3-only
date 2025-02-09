@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box; /* Esto mantiene el ancho y alto a pesar de padding y border*/
-    font-family: 'Inconsolata', monospace;
+    font-family: "Funnel Display", sans-serif;
     list-style: none; /* Quitar los puntos e decoración de las listas */
     text-decoration: none; /* Esto quita el subrayado de los enlaces */
     color: white;
@@ -11,74 +11,81 @@
 
 body{
     background-color: black; /* TODO: borrar cuando tengamos el fondo final */
-}
+}   
 
-header {
-    position: fixed; /* Esto hace que el haader se quede fijo en la parte superior */
+header{
+    position: fixed; /* el header se queda fijo en la parte superior */
     right: 0;
     top: 0;
-    z-index: 100; /* Esto hace que el header se muestre por encima*/
+    z-index: 100; /* header se muestra por encima de otros elementos */
     width: 100%;
-    display: flex; /* Esto hará que los elementos se pongan en linea */
-    align-items: center; /* Centra verticalmente */
-    justify-content: space-between; /* Que los elementos se separen */
+    display: flex;
+    justify-content: space-between;
     padding: 15px 3%;
     background-color: transparent;
 }
-
-.logo {
+.logo{
+    font-weight: 700; /* grueso de la fuente */
     font-size: 30px;
-    font-weight: 800; /* este es el grueso de las letras */
 }
-
 .navlist {
-    display: flex; /* Esto sirve para que los elementos de la lista UL se pongan en linea*/
+    display: flex;
+    
 }
-
 .navlist a {
-    margin-left: 60px; /* es para separar las palabras */
+    margin-left: 60px;
     font-size: 15px;
     font-weight: 600;
-    border-bottom: 2px solid transparent; /* este es un subrayado transparente */
-    transition: all .5s ease; /* esto es para animar todas las caracteristicas del .navlist a */
+    border-bottom: 2px solid transparent;
+    transition: all .5s ease; /* sirve para animar todas las caracteríticas del navlist a*/
 }
-
 .navlist a:hover {
-    border-bottom: 2px solid white; /* este es un subrayado blanco que aparecerá cuando hacemos estamos encima con el mouse */
-}
-
- #menu-icon{
-    display: none;  /* lo pongo en none para que solo se vea cuando la página esté colapsada de forma horizontal */
+    border-bottom: 2px solid white;
+ }
+ menu-icon {
+    display: none;  /* no quiero que se vea el checkboc  */
 } 
 
-#menu-icon{
+#menu-icon {
+    color: white;
     font-size: 35px;
-    z-index: 101; /* para que este sobre el header */
-    cursor: pointer; /* para que aparezca la manito cuando ponemos el mouse encima */
+    z-index: 101;
+    cursor: pointer;
 }
 
-#menu-toggle{
-    display: none; /* nunca quiero que se vea el checkbox*/
+#menu-toggle {
+    display: none; /* nunca quiero que se vea el checkbox */
 }
 
-.menu-icon-action{
-    display: none; /* para que no se le pueda hacer click*/
+    .menu-icon-action {
+    display: none; /* para que no se pueda hacer click */
 }
 
 .hero{
-    height: 100%;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /* fondo de color gradiente */
-    position: relative; /* Para que sea relativo al contenedor (nos permite usar top, bottom, left y right) */
-    display: grid; /* Para que el hero se pueda dividir en dos columnas */
-    grid-template-columns: 1fr 1fr; /* las 2 columnas */
-    align-items: center; /* para alinear verticalmente el hero */
-    gap: 2rem; /* haya espacio de 2 rem entre las dos columnas */
+    width: 100%;  /* ancho de la pantalla */
+    height: 100%; /* altura de la pantalla */
+    min-height: 100vh; /* altura mínima de la pantalla */
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /* degradado */
+    position: relative; /* relativoal contenedor */
+    display: grid; /* grid para que los elementos se coloquen en filas y columnas */
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    align-items: center; /* centrar verticalmente */
+    gap: 2rem; /* espacio entre columnas */
 }
-
 section{
     padding: 0 8%;
+}
+.hero-img{
+    width: 400px;
+    margin: 10% 0 0 10%;
+    height: auto;
+    transition: all .5s linear; /* animación de la imagen */
+}
+
+.hero-img:hover {
+    width: 450px; /* escala de la imagen */
+    transform: scale(1.2);
+    opacity: 0.6;   /* opacidad de la imagen */
 }
 
 .hero-text h5 {
@@ -87,40 +94,36 @@ section{
     margin-bottom: 25px;
 }
 
-.hero-text h1 {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 50px;
-    line-height: 1;
-    margin: 0 0 30px;
-}
-
 .hero-text h4 {
     font-size: 18px;
     font-weight: 600;
-    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hero-text h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero-text h1 {
+    font-family: 'roboto', sans-serif;
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 700;
+    margin: 0 0 30px;
 }
 
 .hero-text p {
     font-size: 80%;
+    font-weight: 400;
     margin-bottom: 40px;
     line-height: 1.9;
 }
-
-.hero-img img{
-    width: 400px;
-    margin: 10% 0 0 10%;
-    height: auto;
-    transition: all 5s linear; /* esto hace que la transición sea lineal */
-}
-
-.hero-img img:hover {
-    width: 450px;
-    opacity: 0.6;
-}
-
 .hero-text a {
     display: inline-block;
     background-color: #4d4d4d;
+    color: white;
     border: 1px solid transparent;
     padding: 15px 30px;
     line-height: 1.4;
@@ -130,144 +133,152 @@ section{
     text-transform: uppercase;
     transition: all .5s ease;
 }
-
 .hero-text a:hover {
-    background-color: transparent;
+    background-color: white;
+    color: black;
     border: 1px solid white;
     transform: translateX(8px);
+    
 }
 
-.hero-text a.videos{
+.hero-text a.videos {
     background-color: transparent;
     border: 1px solid white;
-    margin-left:  20px;
+    color: white;
+    margin-left: 20px;
 }
 
-.hero-text a.videos i{
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.icons {
+.social {
     position: absolute;
     top: 50vh;
-    padding: 0 3%;
-    transform: translateY(-50%);
+    padding: 0 1%;
+    transform: translateY(-50%);   
 }
 
-.icons i {
+.social i {
     display: block;
     margin: 26px 0;
     font-size: 24px;
-    transition: all 0.5s ease;
+    transition: all .5s ease;
 }
 
-.icons i:hover{
+.social i:hover {
     color: #4d4d4d;
-    transform: translateY(-5px);
+    transform: scale(1.2);
 }
 
 .scroll-down {
     position: absolute;
     bottom: 6%;
     right: 3%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all .5s ease;
 }
 
 .scroll-down i {
     display: block;
     padding: 12px;
-    font-size: 25px;
+    font-size: 24px;
+    transition: all .5s ease;
     background-color: #21383d;
     border-radius: 30px;
     transition: all .5s ease;
+}   
+
+.scroll-down i:hover {
+ transform: translateY(-5px);
 }
 
-.scroll-down i:hover{
-    transform: translateY(-5px);
-}
-
-
-/* Aca vamos a hacer mediaqueries para que la web sea responsive */
-
-@media (max-width:992px){
+@media (max-width: 992px) {
     section {
         padding: 0 3%;
-        transition: .2s;
+        transition: all .2s ease;
     }
-
-    .hero-text{
-        padding-top: 0;
+    header {
+        padding: 15px 5%;
     }
-
-    .hero-img{
+    .navlist {
+        display: none;
+    }
+    .menu-icon-action {
+        display: block;
+    }
+    .hero text {
+        padding: 0%;
+    }
+    .hero-text {
+        font-size: 70%;
+    };
+    .hero-img {
         text-align: center;
     }
-
-    .hero-img img{
+    .hero-img img {
         width: 80%;
-        margin: 10% 0 0 10%;
+        margin: 0%;
+    }   
+    .hero-text h1 {
+        font-size: 40px;
     }
-
     .hero-text p {
-        font-size: 70%;
+        font-size: 100%;
     }
-
-    .icons{
+    .social {
         display: none;
     }
-
-    .scroll-down{
+    .scroll-down {
         display: none;
     }
+    
 }
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+    }
+    .logo {
+        font-size: 20px;
 
-@media (max-width: 768px){
-
-    .menu-icon-action{
+    }       
+    .menu-icon {
         display: block;
     }
-
-    #menu-icon{
+    .menu-icon-action {
         display: block;
     }
-
-    .hero-text{
+    .hero-text {
         text-align: center;
         padding-top: 100px;
     }
-
     .hero-img img {
         margin: 0;
     }
-
     .hero {
         height: 100%;
         gap: 1rem;
         grid-template-columns: 1fr;
     }
+}
+.navlist {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 200px;
+    height: 180px;
+    background-color: #021719ef;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    transition: all .5s ease;
+}
 
-    .navlist{
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 200px;
-        height: 180px;
-        background-color: #021719ef;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 20px;
-        transition: all .5s ease-out;
-    }
-
-    .navlist a {
-        display: block;
-        margin: 7px 0;
-    }
-
-    #menu-toggle:checked + label.menu-icon-action + ul{
-        right: 0;
-    }
-
-
+.navlist a {
+    margin-left: 0;
+    display: block;
+    margin: 7px 0;
+}
+#menu-toggle:checked + label.menu-icon-action + ul {
+    right: 0;
 }
